@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/material-design/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontStyle.css">
+    <link rel="stylesheet" href="assets/custom-style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.26.1"></script>
+</head>
+
+<body>
+    <div class="body-vchat">
+        <div class="body-vchat-first">
+            <div class="tab-header">
+                <div class="tab-icon active">
+                    <a href="chat.html">
+                        <i class="mdi mdi-message-text"></i>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="contact.html">
+                        <i class="mdi mdi-account-box-outline"></i>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="notification.html">
+                        <i class="mdi mdi-bell-outline"></i>
+                    </a>
+                </div>
+                <div class="tab-icon-setting" id="settingIcon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>      
+        </div>
+        <div class="body-vchat-left">
+            <div class="body-vchat-left-header">
+                <div data-toggle="modal" data-target="#modalProfile" class="box-avatar">
+                    <img src="assets/images/profile.jpg">
+                    <span>Dương</span>
+                </div>
+                <div class="box-add-user-group">
+                    <span data-toggle="modal" data-target="#modalAddContact" class="icon-control" title="Thêm liên hệ">
+                        <i class="mdi mdi-account-multiple-plus-outline"></i>
+                    </span>
+                    <span data-toggle="modal" data-target="#modalAddGroup" class="icon-control" title="Tạo nhóm">
+                        <i class="mdi mdi-account-group-outline"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="search-bar">
+                <i class="mdi mdi-magnify"></i>
+                <input type="text" placeholder="Tìm kiếm..." id="searchInput">
+            </div>
+             <div class="recent-searches" id="recentSearches" style="display: none;">
+                <div class="box-left-content-title">
+                    <strong class="size-13">Tìm gần đây</strong>
+                </div>
+                <div class="box-left-content-body">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="box-group">
+                                <div class="user-avatar">
+                                    <img src="assets/images/img1.jpg" alt="">
+                                </div>
+                                <div class="box-group-detail">
+                                    <span>Tuấn Hùng</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-group">
+                                <div class="user-avatar">
+                                    <img src="assets/images/img10.jpg" alt="">
+                                </div>
+                                <div class="box-group-detail">
+                                    <span>Nga Halona</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-group">
+                                <div class="user-avatar">
+                                    <img src="assets/images/img12.jpg" alt="">
+                                </div>
+                                <div class="box-group-detail">
+                                    <span>Triệu Khánh Vinh</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-group">
+                                <div class="user-avatar">
+                                    <img src="assets/images/img15.jpg" alt="">
+                                </div>
+                                <div class="box-group-detail">
+                                    <span>Trần Nguyễn Vũ</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="tab-body" id="allMessages">
+                <div>
+                    <div class="box-left-content-title">
+                        <strong class="size-13">Tất cả tin nhắn</strong>
+                    </div>
+                    <div class="box-left-content-body">
+                        <ul class="list-unstyled">
+                            <!-- <li>
+                                <div class="box-group active" data-chat="vchat" >
+                                    <div class="user-avatar">
+                                        <img src="assets/images/img13.jpg" alt="">
+                                    </div>
+                                    
+                                    <div class="box-group-detail">
+                                        <div class="box-group-title">
+                                            <div class="box-group-title-name">
+                                                <span>
+                                                    VChat
+                                                </span>
+                                            </div>
+                                            <div class="box-group-title-time">
+                                                <span>11:21:PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-group-last-message">
+                                            <span>
+                                                Các nội dung được đưa vào hệ t...
+                                            </span>
+                                        </div>
+                                         <div class="options-menu">
+                                            <span class="dots">⋮</span>
+                                            <div class="menu hidden">
+                                                <ul>
+                                                    <li class="pin">📌 Ghim</li>
+                                                    <li class="delete">❌ Xóa</li>
+                                                    <li class="hide">🙈 Ẩn</li>
+                                                    <li class="mute">🔕 Tắt thông báo</li>
+                                                </ul>
+                                            </div>
+                                        </div> 
+                                     </div>
+                                </div> 
+                             </li>   -->       
+                             <li>
+                                <div class="box-group" data-chat="chat-1">
+                                    <div class="user-avatar">
+                                        <img src="assets/images/img1.jpg" alt="">
+                                        <img src="assets/images/img2.jpg" alt="">
+                                        <img src="assets/images/img3.jpg" alt="">
+                                        <img src="assets/images/img3.jpg" alt="">
+                                        <img src="assets/images/img3.jpg" alt="">
+                                        <img src="assets/images/img3.jpg" alt="">
+                                        <img src="assets/images/img3.jpg" alt="">
+                                    </div>
+                            
+                                    <div class="box-group-detail">
+                                        <div class="box-group-title">
+                                            <div class="box-group-title-name">
+                                                <span>2421 Giải đề + share sách</span>
+                                                <i class="pin-icon" style="display: none;">📌</i>
+                                            </div>
+                                           
+                                            <div class="box-group-title-time">
+                                                <span>5 giờ</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-group-last-message">
+                                            <span>Nói ít thui đừng nói nhiều quá...</span>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="options-menu">
+                                        <span class="dots">⋮</span>
+                                        <div class="menu hidden">
+                                            <ul>
+                                                <li class="pin">Ghim hội thoại</li>
+                                                <li class="delete">Xóa tin nhắn</li>
+                                                <li class="hide">Ẩn tin nhắn</li>
+                                                <li class="mute">Tắt thông báo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="box-group" data-chat="chat-2">
+                                    <div class="user-avatar">
+                                        <img src="assets/images/img8.jfif" alt="">
+                                    </div>
+                                    <div class="box-group-detail">
+                                        <div class="box-group-title">
+                                            <div class="box-group-title-name">
+                                                <span>
+                                                    Phạm Băng Trang
+                                                </span>
+                                                <i class="pin-icon" style="display: none;">📌</i>
+                                            </div>
+                                            <div class="box-group-title-time">
+                                                <span>11:07:PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-group-last-message">
+                                            <span>
+                                                Tuyển dụng thêm 5 bạn nhân sự ...
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="options-menu">
+                                        <span class="dots">⋮</span>
+                                        <div class="menu hidden">
+                                            <ul>
+                                                <li class="pin">Ghim hội thoại</li>
+                                                <li class="delete">Xóa tin nhắn</li>
+                                                <li class="hide">Ẩn tin nhắn</li>
+                                                <li class="mute">Tắt thông báo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </li>
+                          
+                              <li>
+                                <div class="box-group" >
+                                    <div class="user-avatar">
+                                        <img src="assets/images/img1.jpg" alt="">
+                                    </div>
+                                    <div class="box-group-detail">
+                                        <div class="box-group-title">
+                                            <div class="box-group-title-name">
+                                                <span>
+                                                    Ngô Minh Trí
+                                                </span>
+                                                <i class="pin-icon" style="display: none;">📌</i>
+                                            </div>
+                                            <div class="box-group-title-time">
+                                                <span>11:06:PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-group-last-message">
+                                            <span>
+                                                Dự án sáng mai bắt đầu lúc ...
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="options-menu">
+                                        <span class="dots">⋮</span>
+                                        <div class="menu hidden">
+                                            <ul>
+                                                <li class="pin">Ghim hội thoại</li>
+                                                <li class="delete">Xóa tin nhắn</li>
+                                                <li class="hide">Ẩn tin nhắn</li>
+                                                <li class="mute">Tắt thông báo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="body-vchat-right">
+             <div id="chat-vchat" class="main-box-chat" style="display: none;">
+                <div class="main-box-chat box-contact-info-opened">
+                    <div class="box-chat">
+                        <div class="box-chat-header">
+                            <div class="box-avatar-1">
+                                <div id="avatar-container">
+                                    <img src="assets/images/img13.jpg" alt="">
+                                    <img src="assets/images/img14.jpg" alt="">
+                                    <img src="assets/images/img15.jpg" alt="">
+                                    <img src="assets/images/img19.jpg" alt="">
+                                    <img src="assets/images/img12.jpg" alt="">
+                                    <img src="assets/images/img10.jpg" alt="">            
+                                </div> 
+                                <div class="extra-avatar-1"></div>
+                                <div class="info">
+                                    <span class="name">Vchat3</span><br>
+                                    <p class="status">Truy cập 23 phút trước</p>
+                                </div>
+                            </div>
+                            <div class="box-add-user-group">
+                                <span class="icon-control" data-toggle="modal" data-target="#modalAddMember" title="Thêm thành viên">
+                                    <i class="mdi mdi-account-plus-outline"></i> 
+                                </span>
+                                <span data-toggle="modal" data-target="#modalOutgoingCall" class="icon-control" title="Gọi video">
+                                    <i class="mdi mdi-video-outline"></i>
+                                </span>
+                                <span data-toggle="modal" data-target="#modalOutgoingCall" class="icon-control" title="Gọi cuộc hội thoại">
+                                    <i class="mdi mdi-phone"></i>
+                                </span>
+                                <span class="icon-control" title="Tìm kiếm" id="searchIcon">
+                                    <i class="mdi mdi-magnify"></i>
+                                </span>
+                                <span id="toggleContactInfo" class="icon-control active" title="Thông tin hội thoại">
+                                    <i class="mdi mdi-checkbox-blank-outline"></i>
+                                </span>
+                            </div>                            
+                        </div>
+                        <div class="box-chat-body">
+                            <div class="box-message">
+                                <div>
+                                    <div class="box-message-received">
+                                        <div class="box-message-content">
+                                            <div class="box-message-download">
+                                                <i class="mdi mdi-download"></i>
+                                            </div>
+                                            <div class="box-message-content-message">
+                                                <div class="box-message-content-message-content">
+                                                    <img class="img-message" src="assets/images/img20.png" alt="Img">
+                                                </div>
+                                                <div class="box-message-content-message-time">
+                                                    <span>11:09 PM</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction-box">
+                                                <button class="reaction-button">
+                                                    <i class="mdi mdi-thumb-up-outline"></i>
+                                                </button>                                                
+                                                <div class="reaction-menu">
+                                                    <span class="emoji-icon">👍</span>
+                                                    <span class="emoji-icon">❤️</span>
+                                                    <span class="emoji-icon">😂</span>
+                                                    <span class="emoji-icon">😯</span>
+                                                    <span class="emoji-icon">😢</span>
+                                                    <span class="emoji-icon">😡</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-message-img">
+                                            <img src="assets/images/profile.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="box-message-send">
+                                        <div class="box-message-img">
+                                            <img src="assets/images/img2.jpg" alt="">
+                                        </div>
+                                        <div class="box-message-content">
+                                            <div class="box-message-content-message">
+                                                <div class="box-message-content-message-content">
+                                                    <div>
+                                                        Sau buổi báo cáo sáng nay. Em gửi lại file hệ thống đã tổng hợp
+                                                        các thông tin cần lưu ý cũng như đề xuất của mọi người trong
+                                                        nhóm ạ
+                                                    </div>
+                                                </div>
+                                                <div class="box-message-content-message-time">
+                                                    <span>11:11 PM</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction-box">
+                                                <button class="reaction-button">
+                                                    <i class="mdi mdi-thumb-up-outline"></i>
+                                                </button>   
+                                                <div class="reaction-menu">
+                                                    <span class="emoji-icon">👍</span>
+                                                    <span class="emoji-icon">❤️</span>
+                                                    <span class="emoji-icon">😂</span>
+                                                    <span class="emoji-icon">😯</span>
+                                                    <span class="emoji-icon">😢</span>
+                                                    <span class="emoji-icon">😡</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reaction-box">
+                                            <button class="reaction-button">👍</button>
+                                            <div class="reaction-menu">
+                                                <span class="emoji-icon" data-reaction="👍">👍</span>
+                                                <span class="emoji-icon" data-reaction="❤️">❤️</span>
+                                                <span class="emoji-icon" data-reaction="😂">😂</span>
+                                                <span class="emoji-icon" data-reaction="😯">😯</span>
+                                                <span class="emoji-icon" data-reaction="😢">😢</span>
+                                                <span class="emoji-icon" data-reaction="😡">😡</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-chat-send">
+                            <div class="box-chat-send-media">
+                                <span class="mr-1 attachment-icon">
+                                    <i class="mdi mdi-attachment"></i>
+                                </span>
+                                <span class="mr-1 camera-icon">
+                                    <i class="mdi mdi-camera"></i>
+                                </span>
+                                <span id="emoji-icon" class="emoji-icon">
+                                    <i class="mdi mdi-emoticon-happy-outline"></i>
+                                </span>
+                                <input type="file" id="fileInput" style="display: none;" accept="image/*, .pdf, .doc, .docx">
+                                <div id="emoji-container">
+                                    <emoji-picker id="emojiPicker"></emoji-picker>
+                                </div>
+                            </div>
+                            <div class="box-chat-send-text">
+                                <textarea id="messageInput" class="form-control" rows="1" placeholder="Nhập nội dung tin nhắn"></textarea>
+                            </div>
+                            <div class="btn-send-message">
+                                <span title="Gửi">
+                                    <i class="mdi mdi-send"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-contact-info" id="groupInfo">
+                        <div class="box-contact-info-header">
+                            <strong>Thông tin nhóm</strong>
+                        </div>
+                        <!-- <div class="box-contact-info-header-member" style="display:none">
+                            <strong>Thông tin hội thoại</strong>
+                        </div> -->
+                        <div class="box-contact-info-body">
+                            <div class="box-group-info">
+                                <img src="assets/images/img13.jpg" alt="">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="mt-1">
+                                <u>Danh sách thành viên</u>
+                            </div>
+                            <div class="mt-2 list-member-in-group">
+                                <ul class="list-unstyled">
+                                    <li class="single-avatar">
+                                        <div class="user-avatar-single">
+                                            <img src="assets/images/img10.jpg">
+                                        </div>
+                                        <span>Bùi Ngọc Anh</span>
+                                        <div class="member-actions">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                            <div class="action-menu">
+                                                <button class="btn-remove-member">Xóa khỏi nhóm</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-avatar">
+                                        <div class="user-avatar-single">
+                                            <img src="assets/images/img2.jpg" >  
+                                        </div>
+                                        <span>Ngô Minh Ngọc Ánh</span>
+                                        <div class="member-actions">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                            <div class="action-menu">
+                                                <button class="btn-remove-member">Xóa khỏi nhóm</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-contact-info-body-member" style="display:none">
+                            <div class="box-group-info">
+                                <img src="assets/images/img13.jpg" alt="">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="mt-1">
+                                <u>Danh sách thành viên</u>
+                            </div>
+                            <div class="mt-2 list-member-in-group">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="user-avatar">
+                                            <img src="assets/images/img10.jpg" style="margin-right: 10px !important;">
+                                            <span>Bùi Ngọc Anh</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="user-avatar">
+                                            <img src="assets/images/img2.jpg" style="margin-right: 10px !important;">
+                                            <span>Ngô Minh Ngọc Ánh</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="user-avatar">
+                                            <img src="assets/images/img1.jpg" style="margin-right: 10px !important;">
+                                            <span>Ngô Minh Trí</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-box" id="searchBox" style="display: none;">
+                        <h4>Tìm kiếm hội thoại</h4>
+                        <div class="search-input">
+                            <i class="mdi mdi-magnify"></i>
+                            <input type="text" placeholder="Nhập từ khóa để tìm kiếm">
+                        </div>
+                        <div class="search-filters">
+                            <label for="filter-user">Lọc theo:</label>
+                            <select id="filter-user">
+                                <option value="sender">Người gửi</option>
+                            </select>
+                            <select id="filter-date">
+                                <option value="date">Ngày gửi</option>
+                            </select>
+                        </div>
+                        <div class="search-placeholder">
+                            <img src="assets/images/search-placeholder.png" alt="Tìm kiếm">
+                            <p>Hãy nhập từ khóa để bắt đầu tìm kiếm tin nhắn và file trong trò chuyện</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContainer"></div>
+    <div id="settingPopupContainer"></div>
+
+    
+    <script src="js/style.js"></script>
+    <script src="js/chat.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

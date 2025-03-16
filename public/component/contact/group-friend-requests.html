@@ -1,0 +1,144 @@
+<div id="group-friend-requests" class="right-section" >
+    <div class="container">
+        <!-- Tiêu đề -->
+        <div class="header">
+            <span>📌</span>
+            <span>Danh sách nhóm và cộng đồng</span>
+        </div>
+    
+        <!-- Thanh tìm kiếm và bộ lọc -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+            <select id="sortSelect">
+                <option value="new">Hoạt động (mới → cũ)</option>
+                <option value="old">Hoạt động (cũ → mới)</option>
+            </select>
+            <button onclick="filterGroups()">Tất cả</button>
+        </div>
+    
+        <!-- Danh sách nhóm -->
+        <ul class="group-list" id="groupList">
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">2421 Giải đề + share sách ETS 2024</span>
+                    <div class="group-members">359 thành viên</div>
+                </div>
+                <div class="group-options">⋮
+                    <div class="options-menu">
+                        <ul>
+                            <li class="delete-group">Xóa nhóm</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">KTPM_Gắng lấy điểm 10</span>
+                    <div class="group-members">9 thành viên</div>
+                </div>
+                <div class="group-options">⋮
+                    <div class="options-menu">
+                        <ul>
+                            <li class="delete-group">Xóa nhóm</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <!-- <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">NNPTUD_ST5</span>
+                    <div class="group-members">4 thành viên</div>
+                </div>
+                <div class="group-options">⋮</div>
+            </li>
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">K21 - Công nghệ Phần mềm</span>
+                    <div class="group-members">999+ thành viên</div>
+                </div>
+                <div class="group-options">⋮</div>
+            </li>
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">KT Chiều Thứ 5</span>
+                    <div class="group-members">100 thành viên</div>
+                </div>
+                <div class="group-options">⋮</div>
+            </li>
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">KT Chiều Thứ 5</span>
+                    <div class="group-members">100 thành viên</div>
+                </div>
+                <div class="group-options">⋮</div>
+            </li>
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">KT Chiều Thứ 5</span>
+                    <div class="group-members">100 thành viên</div>
+                </div>
+                <div class="group-options">⋮</div>
+            </li>
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">KT Chiều Thứ 5</span>
+                    <div class="group-members">100 thành viên</div>
+                </div>
+                <div class="group-options">⋮</div>
+            </li>
+            <li class="group-item">
+                <div class="avatar-group">
+                    <img src="assets/images/img1.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                    <img src="assets/images/img2.jpg" alt="avatar">
+                </div>
+                <div class="group-info">
+                    <span class="group-name">KT Chiều Thứ 5</span>
+                    <div class="group-members">100 thành viên</div>
+                </div>
+                <div class="group-options">⋮</div>
+            </li> -->
+        </ul>
+    </div>
+    <script src="js/style.js"></script>
+    <script src="js/contact.js"></script>
+</div>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/material-design/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontStyle.css">
+    <link rel="stylesheet" href="assets/custom-style.css">
+</head>
+
+<body>
+    <div class="body-vchat">
+        <div class="body-vchat-first">
+            <div class="tab-header">
+                <div class="tab-icon active">
+                    <a href="chat.html">
+                        <i class="mdi mdi-message-text"></i>
+                        <!-- <span>Tin nhắn</span> -->
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="call.html">
+                        <i class="mdi mdi-phone"></i>
+                        <!-- <span>Cuộc gọi</span> -->
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="contact.html">
+                        <i class="mdi mdi-account-box-outline"></i>
+                        <!-- <span>Danh bạ</span> -->
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="notification.html">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <!-- <span>Thông báo</span> -->
+                    </a>
+                </div>
+                <div class="tab-icon-setting" id="settingIcon">
+                    <i class="fa-solid fa-gear"></i>
+                </div> 
+            </div>
+        </div>
+        <div class="body-vchat-left">
+            <div class="body-vchat-left-header">
+                <div data-toggle="modal" data-target="#modalProfile" class="box-avatar">
+                    <img src="assets/images/profile.jpg">
+                    <span>Dương</span>
+                </div>
+                <div class="box-add-user-group">
+                    <span data-toggle="modal" data-target="#modalAddContact" class="icon-control" title="Thêm liên hệ">
+                        <i class="mdi mdi-account-plus"></i>
+                    </span>
+                    <span data-toggle="modal" data-target="#modalAddGroup" class="icon-control" title="Tạo nhóm">
+                        <i class="mdi mdi-account-group"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- <div class="tab-header">
+                <div class="tab-icon">
+                    <a href="index.html">
+                        <i class="mdi mdi-message-text"></i>
+                        <span>Tin nhắn</span>
+                    </a>
+                </div>
+                <div class="tab-icon active">
+                    <a href="call.html">
+                        <i class="mdi mdi-phone"></i>
+                        <span>Cuộc gọi</span>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="contact.html">
+                        <i class="mdi mdi-account-box-outline"></i>
+                        <span>Danh bạ</span>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="notification.html">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <span>Thông báo</span>
+                    </a>
+                </div>
+            </div> -->
+            <div class="tab-body">
+                <div>
+                    <div class="box-left-content-title">
+                        <strong class="size-13">Tất cả</strong>
+                    </div>
+                    <div class="box-left-content-body">
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="box-call active">
+                                    <div class="user-avatar">
+                                        <img src="assets/images/img2.jpg" alt="">
+                                    </div>
+                                    <div class="box-call-detail">
+                                        <div>
+                                            <div class="box-call-detail-name">
+                                                Ngô Minh Ngọc Ánh
+                                            </div>
+                                            <div class="box-call-detail-status text-danger">
+                                                <i class="mdi mdi-call-missed"></i>
+                                                <span>11:36 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-call-detail-control">
+                                            <span data-toggle="modal" data-target="#modalOutgoingCall"
+                                                class="icon-control">
+                                                <i class="mdi mdi-video-outline"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box-call">
+                                    <div class="user-avatar">
+                                        <img src="assets/images/img1.jpg" alt="">
+                                    </div>
+                                    <div class="box-call-detail">
+                                        <div>
+                                            <div class="box-call-detail-name">
+                                                Ngô Minh Trí
+                                            </div>
+                                            <div class="box-call-detail-status">
+                                                <i class="mdi mdi-call-made"></i>
+                                                <span>10:00 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-call-detail-control">
+                                            <span data-toggle="modal" data-target="#modalOutgoingCall"
+                                                class="icon-control">
+                                                <i class="mdi mdi-video-outline"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box-call">
+                                    <div class="user-avatar">
+                                        <img src="assets/images/img6.jpg" alt="">
+                                    </div>
+                                    <div class="box-call-detail">
+                                        <div>
+                                            <div class="box-call-detail-name">
+                                                Nguyễn Ngọc Trinh
+                                            </div>
+                                            <div class="box-call-detail-status">
+                                                <i class="mdi mdi-call-received"></i>
+                                                <span>09:00 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-call-detail-control">
+                                            <span data-toggle="modal" data-target="#modalOutgoingCall"
+                                                class="icon-control">
+                                                <i class="mdi mdi-video-outline"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-vchat-right">
+            <div>
+                <div class="main-box-call">
+                    <div class="main-box-call-header">
+                        <div class="box-avatar mr-1">
+                            <img src="assets/images/img2.jpg" alt="">
+                            <span>Ngô Minh Ngọc Ánh</span>
+                        </div>
+                    </div>
+                    <div class="box-main-call">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="list-call-detail">
+                                    <div>
+                                        <i class="mdi mdi-phone-missed"></i>
+                                        <div>
+                                            <div>
+                                                <b>Cuộc gọi nhỡ</b>
+                                            </div>
+                                            <div>
+                                                <small>11:00 PM</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span data-toggle="modal" data-target="#modalOutgoingCall"
+                                            class="span-call span-call-video">
+                                            <i class="mdi mdi-video"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-call-detail">
+                                    <div>
+                                        <i class="mdi mdi-phone-outgoing"></i>
+                                        <div>
+                                            <div>
+                                                <b>Cuộc gọi đi</b>
+                                            </div>
+                                            <div>
+                                                <small>10:00 PM</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span data-toggle="modal" data-target="#modalOutgoingCall"
+                                            class="span-call span-call-video">
+                                            <i class="mdi mdi-video"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-call-detail">
+                                    <div>
+                                        <i class="mdi mdi-phone-incoming"></i>
+                                        <div>
+                                            <div>
+                                                <b>Cuộc gọi đến</b>
+                                            </div>
+                                            <div>
+                                                <small>09:00 PM</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span data-toggle="modal" data-target="#modalOutgoingCall"
+                                            class="span-call span-call-video">
+                                            <i class="mdi mdi-video"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContainer"></div>
+    <div id="settingPopupContainer"></div> <!-- Gọi phần setting-popup -->
+
+    <script src="js/style.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

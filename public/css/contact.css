@@ -1,0 +1,315 @@
+.search-bar {
+    padding: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.box-left-menu ul {
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+}
+
+.box-left-menu li {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: #f9f9f9;
+    font-weight: bold;
+}
+
+.box-left-menu li:hover {
+    background-color: #e0e0e0;
+}
+
+.content-section {
+    display: none;
+    padding: 5px 15px;
+    background: #fff;
+}
+/*contact*/
+.friend-requests-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.requests-section {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.requests-section h3 {
+    margin-bottom: 10px;
+}
+
+.requests-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.request-card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 120px;
+}
+
+.request-card img {
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.request-card .name {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.cancel-btn, .accept-btn, .decline-btn {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cancel-btn {
+    background: #ff4d4d;
+    color: white;
+}
+
+.accept-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.decline-btn {
+    background: #888;
+    color: white;
+}
+
+.view-more {
+    display: none;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*hiện khung xóa chặn*/
+
+/* .dots-container {
+    position: relative;
+} */
+
+.box-contact {
+    position: relative;
+}
+
+/* Định vị dấu ba chấm ở cùng một vị trí cho tất cả khung */
+.dotss {
+    font-size: 18px;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 120px; /* Đảm bảo kích thước vừa phải */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1000; /* Đảm bảo hiển thị trên tất cả */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* Giữ nội dung không bị xuống dòng */
+}
+
+/*group-friend-request*/
+.container {
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-bar select, .search-bar button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+.group-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.group-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.avatar-group {
+    position: relative;
+    width: 50px; /* Điều chỉnh theo kích thước mong muốn */
+    height: 50px;
+}
+
+.avatar-group img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid white; /* Tạo viền trắng để tách biệt */
+}
+
+.avatar-group img:first-child {
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+.avatar-group img:nth-child(2) {
+    z-index: 1;
+    left: 15px; /* Điều chỉnh độ chồng lên */
+    top: 15px;
+}
+
+.group-item .group-info {
+    flex-grow: 1;
+    margin-left: 20px; /* Tạo khoảng cách với avatar */
+}
+
+.group-options {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.group-info {
+    flex: 1;
+}
+.group-name {
+    font-weight: bold;
+}
+.group-members {
+    font-size: 12px;
+    color: gray;
+}
+.group-options {
+    cursor: pointer;
+    padding: 5px;
+}
+
+#group-friend-requests {
+    max-height: 5000px !important; /* Chiều cao tối đa của toàn bộ khung */
+    /* overflow: hidden; Ẩn nội dung tràn ra ngoài */
+}
+
+.group-list {
+    max-height: 500px !important; /* Chiều cao tối đa của danh sách nhóm */
+    overflow-y: auto; /* Hiển thị thanh cuộn dọc khi nội dung dài */
+    padding-right: 10px; /* Tạo khoảng cách với thanh cuộn */
+}
+
+/* Tuỳ chỉnh thanh cuộn */
+.group-list::-webkit-scrollbar {
+    width: 6px; /* Độ rộng của thanh cuộn */
+}
+
+.group-list::-webkit-scrollbar-thumb {
+    background-color: #aaa; /* Màu của thanh cuộn */
+    border-radius: 5px; /* Bo tròn góc */
+}
+
+.group-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Màu nền của thanh cuộn */
+}
+
+/*khung xóa nhóm*/
+.group-options {
+    position: relative;
+    cursor: pointer; /* Cho thấy có thể bấm */
+    display: inline-block; /* Giữ đúng vị trí */
+}
+
+.options-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 100;
+}
+
+.options-menu ul {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.options-menu li {
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.options-menu li:hover {
+    background: #f0f0f0;
+}
+
+
+/**/
+
+

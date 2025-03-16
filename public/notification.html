@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/material-design/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontStyle.css">
+    <link rel="stylesheet" href="assets/custom-style.css">
+</head>
+
+<body>
+    <div class="body-vchat">
+        <div class="body-vchat-first">
+            <div class="tab-header">
+                <div class="tab-icon active">
+                    <a href="chat.html">
+                        <i class="mdi mdi-message-text"></i>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="contact.html">
+                        <i class="mdi mdi-account-box-outline"></i>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="notification.html">
+                        <i class="mdi mdi-bell-outline"></i>
+                    </a>
+                </div>
+                <div class="tab-icon-setting" id="settingIcon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+        </div>
+        <div class="body-vchat-left">
+            <div class="body-vchat-left-header">
+                <div data-toggle="modal" data-target="#modalProfile" class="box-avatar">
+                    <img src="assets/images/profile.jpg">
+                    <span>Dương</span>
+                </div>
+                <div class="box-add-user-group">
+                    <span data-toggle="modal" data-target="#modalAddContact" class="icon-control" title="Thêm liên hệ">
+                        <i class="mdi mdi-account-plus"></i>
+                    </span>
+                    <span data-toggle="modal" data-target="#modalAddGroup" class="icon-control" title="Tạo nhóm">
+                        <i class="mdi mdi-account-group"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div>
+                    <div class="box-left-content-title">
+                        <strong class="size-13">Thông báo</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-vchat-right">
+            <div>
+                <div class="box-right-content-header-default">
+                    <b>Thông báo</b>
+                </div>
+                <div class="box-right-content-body-default">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContainer"></div>
+    <div id="settingPopupContainer"></div>
+
+    <script src="js/style.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

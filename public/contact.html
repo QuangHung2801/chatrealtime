@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/material-design/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontStyle.css">
+    <link rel="stylesheet" href="assets/custom-style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <div class="body-vchat">
+        <div class="body-vchat-first">
+            <div class="tab-header">
+                <div class="tab-icon active">
+                    <a href="chat.html">
+                        <i class="mdi mdi-message-text"></i>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="contact.html">
+                        <i class="mdi mdi-account-box-outline"></i>
+                    </a>
+                </div>
+                <div class="tab-icon">
+                    <a href="notification.html">
+                        <i class="mdi mdi-bell-outline"></i>
+                    </a>
+                </div>
+                <div class="tab-icon-setting" id="settingIcon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+        </div>
+        <div class="body-vchat-left">
+            <div class="body-vchat-left-header">
+                <div data-toggle="modal" data-target="#modalProfile" class="box-avatar">
+                    <img src="assets/images/profile.jpg">
+                    <span>Dương</span>
+                </div>
+                <div class="box-add-user-group">
+                    <span data-toggle="modal" data-target="#modalAddContact" class="icon-control" title="Thêm liên hệ">
+                        <i class="mdi mdi-account-plus"></i>
+                    </span>
+                    <span data-toggle="modal" data-target="#modalAddGroup" class="icon-control" title="Tạo nhóm">
+                        <i class="mdi mdi-account-group"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="tab-body">
+                <!-- Thanh tìm kiếm -->
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm..." onkeyup="searchContacts()">
+                </div>
+        
+                <!-- Danh mục -->
+                <div class="box-left-menu">
+                    <ul class="list-unstyled">
+                        <li onclick="toggleSection('friend-list')">Danh sách bạn bè</li>
+                        <div id="friend-list" class="content-section">
+                            <div class="box-left-content-title">
+                                <strong class="size-13">Bạn bè (3)</strong>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li onclick="showContactInfo('Ngô Minh Ngọc Ánh', 'assets/images/img2.jpg', 'Nữ', '15/06/1999', '0912.345.678', 'nga@gmail.com', 'Hà Nội, Việt Nam')">
+                                    <div class="box-contact">
+                                        <div class="user-avatar">
+                                            <img src="assets/images/img2.jpg" alt="">
+                                        </div>
+                                        <div class="box-contact-detail">
+                                            <div class="box-contact-detail-name">Ngô Minh Ngọc Ánh</div>
+                                        </div>
+                                        <div class="dots-container">
+                                            <div class="dotss" onclick="toggleMenu(event, this)">⋮</div>
+                                            <div class="dropdown-menu">
+                                                <div onclick="removeFriend('Ngô Minh Ngọc Ánh')">Xóa bạn</div>
+                                                <div onclick="blockFriend('Ngô Minh Ngọc Ánh')">Chặn bạn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            
+                                <li onclick="showContactInfo('Ngô Minh Trí', 'assets/images/img1.jpg', 'Nam', '15/06/1999', '0912.345.678', 'tri@gmail.com', 'TP.HCM, Việt Nam')">
+                                    <div class="box-contact">
+                                        <div class="user-avatar">
+                                            <img src="assets/images/img1.jpg" alt="">
+                                        </div>
+                                        <div class="box-contact-detail">
+                                            <div class="box-contact-detail-name">Ngô Minh Trí</div>
+                                        </div>
+                                        <div class="dots-container">
+                                            <div class="dotss" onclick="toggleMenu(event, this)">⋮</div>
+                                            <div class="dropdown-menu">
+                                                <div onclick="removeFriend('Ngô Minh Ngọc Ánh')">Xóa bạn</div>
+                                                <div onclick="blockFriend('Ngô Minh Ngọc Ánh')">Chặn bạn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <li data-page="group-friend-requests">Danh sách nhóm</li>
+                        <li data-page="friend-requests">Lời mời kết bạn</li>
+                        <!-- <li data-page="group-requests">Lời mời vào nhóm</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="body-vchat-right">
+            <div id="content-area">
+                <!-- Nội dung sẽ được tải vào đây -->
+            </div>
+        </div>
+    </div>
+   
+    <div id="modalContainer"></div>
+    <div id="settingPopupContainer"></div>
+
+  
+    <script src="js/style.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
