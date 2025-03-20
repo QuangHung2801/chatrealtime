@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             if (data.success) {
                 alert("Đăng nhập thành công!");
+                localStorage.setItem("token", data.token); 
+                localStorage.setItem("userId", data.userId);
                 window.location.href = "chat.html"; 
             } else {
                 alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
